@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# Pre-built package
+google-trend-notice-slack.zip
