@@ -62,21 +62,24 @@ async function sendSlack(webhookUrl, channel, text) {
 }
 
 exports.handler = async (event, context) => {
-  console.log('[google-trend-notice-slack]: START');
+  console.log('[google-trend-notice-slack-using-lambda]: START');
 
   try {
     const trendText = await getTrendText();
     const result = createResultText(trendText);
-    console.log('[google-trend-notice-slack]: ', result.join('\n'));
+    console.log(
+      '[google-trend-notice-slack-using-lambda]: ',
+      result.join('\n')
+    );
 
     const sendSlackResult = await sendSlack(
       process.env['WEBHOOK_URL'],
       process.env['CHANNEL_NAME'],
       result.join('\n')
     );
-    console.log('[google-trend-notice-slack]:', sendSlackResult);
+    console.log('[google-trend-notice-slack-using-lambda]:', sendSlackResult);
 
-    console.log('[google-trend-notice-slack]: FINISH');
+    console.log('[google-trend-notice-slack-using-lambda]: FINISH');
 
     return context.succeed(result);
   } catch (error) {
