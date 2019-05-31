@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build": "bash build.sh",
+    "fmt": "prettier --write index.js"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.1"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
