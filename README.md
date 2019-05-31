@@ -1,6 +1,6 @@
-# google-trend-notice-slack
+# google-trend-notice-slack-using-lambda
 
-Fetch [google trend](https://trends.google.com/trends/?geo=US) text and send Slack
+Fetch [Google Trends](https://trends.google.com/trends/) text and send Slack using [AWS - Lambda](https://aws.amazon.com/lambda/)
 
 
 
@@ -10,23 +10,34 @@ Fetch [google trend](https://trends.google.com/trends/?geo=US) text and send Sla
 
 
 ```
+yarn
 yarn build
 ```
 
 
 
-### Incoming WebHooks
+### Incoming WebHooks (Slack)
 
-Setup [Incoming WebHooks](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks) at Your Slack's workspace
+Setup [Incoming WebHooks](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks) at Your Slack workspace
 
 
 
-### Setup env
+### Setup AWS Lambda Layer
+
+See here (Japanese post)
+
+[AWS LambdaでPuppeteerを動かす](https://qiita.com/kodai-saito/items/9051d2b30a29c7d64f7d)
+
+
+
+### Set env
 
 Environment variable of lambda
 
 * CHANNEL_NAME
 * WEBHOOK_URL
+
+(Both, your slack workspace)
 
 
 
